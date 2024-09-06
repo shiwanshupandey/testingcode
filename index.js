@@ -11,30 +11,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const allowedOrigins = [
-  'http://localhost',
-  'http://localhost:3000',
-  'http://127.0.0.1:5500/register.html',
-  'http://127.0.0.1:5500/Frond_End/register.html',
-  'https://formpayment.ogcs.co.in/Frond_End/register.html',
-  'https://formpayment.ogcs.co.in/',
-  'https://ogcs.co.in/',
-];
+const allowedOrigins = ['https://formpayment.ogcs.co.in'];
 
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
-
-app.use(cors({
-  origin: 'https://formpayment.ogcs.co.in',  // Allow your frontend origin
-  credentials: true
+  origin: allowedOrigins,
+  credentials: true // If your frontend requires cookies or other credentials
 }));
 
 const GOOGLE_CLIENT_EMAIL ='ogcs-895@tidal-glider-434811-p6.iam.gserviceaccount.com';
@@ -97,6 +78,7 @@ app.get('/', async (req, res) => {
   try {
     const data = await getDataFromGoogleSheet();
     res.json(data); // Or render an HTML page with this data
+    res.json({ message: 'CORS is working!' });
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'Error fetching data from Google Sheets' });
