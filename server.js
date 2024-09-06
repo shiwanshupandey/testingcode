@@ -89,7 +89,7 @@ app.post('/', async (req, res) => {
 });
 
 // New route for the data page
-app.get('/data', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const data = await getDataFromGoogleSheet();
     res.json(data); // Or render an HTML page with this data
