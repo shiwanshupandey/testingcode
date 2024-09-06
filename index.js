@@ -78,17 +78,7 @@ app.post('/', async (req, res) => {
 app.get('/', async (req, res) => {
   try {
     const data = await getDataFromGoogleSheet();
-
-    // Check the "Accept" header for JSON or HTML
-    const acceptHeader = req.headers.accept;
-
-    if (acceptHeader && acceptHeader.includes('application/json')) {
-      // Respond with JSON if the client expects JSON
-      res.json(data);
-    } else {
-      // Otherwise, render the HTML template with the data
-      res.render('index', { data });
-    }
+    res.json(data);
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'Error fetching data from Google Sheets' });
