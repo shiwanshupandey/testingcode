@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Baba V. Ohol - Motivational Speaker & Corporate Trainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'suker', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;      
+            background: linear-gradient(45deg, #0770ad, #0c0c0e);
+
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .header:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .header-text {
+            flex: 1;
+            padding-right: 30px;
+
+        }
+        .header-image {
+            flex: 0 0 300px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 0 0 5px 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            display: inline-block;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #34495e;
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            display: inline-block;
+
+        }
+        h3 {
+            color: #7f8c8d;
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+        h1::after, h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+h1:hover::after, h2:hover::after {
+    transform: scaleX(1);
+}
+        img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px)scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .highlight {
+            color: #e73c7b;
+            font-weight: 600;
+        }
+
+
+        .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+        .quote {
+            position: relative;
+            font-style: italic;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .quote::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-size: 60px;
+    color: #3498db;
+    opacity: 0.5;
+}
+        .faq {
+            margin-top: 40px;
+        }
+        .faq h2 {
+    font-weight: 700;
+}
+
+        .faq h3 {
+    color: #050f35; /* navy blue color as requested earlier */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+        }
+        .faq h3:hover {
+            color: #050f35;
+        }
+        .faq p {
+            display: none;
+            padding-left: 20px;
+            border-left: 2px solid #050f35;
+            font-weight: 500;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #74b9ff, #55efc4);
+    color: #2d3436;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(45deg, #55efc4, #74b9ff);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+.highlight {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #021765;
+    transition: all 0.3s ease;
+}
+
+.highlight:hover {
+    background-color: #f9f9f9;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="header">
+            <div class="header-text">
+                <h1>Mr. Baba V. Ohol</h1>
+                <h2>Motivational Speaker & Corporate Trainer</h2>
+                <h3>Managing Director, OGCS Private Limited</h3>
+            </div>
+            <div class="header-image">
+                <img src="image.jpeg" alt="Mr. Baba V. Ohol">
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>A Master of Motivation</h2>
+            <p>Baba's training sessions are a powerful blend of <span class="highlight">practical advice</span>, <span class="highlight">real-world examples</span>, and <span class="highlight">engaging storytelling</span>. His areas of expertise include <span class="highlight">leadership development</span>, <span class="highlight">personal effectiveness</span>, <span class="highlight">stress management</span>, and <span class="highlight">team building</span>. His <span class="highlight">dynamic and relatable style</span> resonates with audiences, making complex concepts easy to understand and apply.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Experience and Expertise</h2>
+            <p>With <span class="highlight">over three decades of experience</span>, Baba is a <span class="highlight">renowned motivational speaker and corporate trainer</span>. Starting as a civil engineer, he has managed <span class="highlight">complex projects</span> in sectors such as <span class="highlight">steel plants</span>, <span class="highlight">petrochemical plants</span>, and <span class="highlight">waste-to-energy projects</span>. His work with major companies has honed his <span class="highlight">innovative solutions</span> for project management.</p>
+            <p>Baba has collaborated with <span class="highlight">leading organizations</span>, delivering <span class="highlight">impactful training</span> in <span class="highlight">English, Hindi, and Marathi</span>. Dedicated to <span class="highlight">nurturing young talent</span>, he also conducts <span class="highlight">specialized programs</span> for fresher civil engineers, ensuring their success in the industry.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Program Insight</h2>
+            <p>Participants will master the art of <span class="highlight">confident interview handling</span> and <span class="highlight">impactful self-presentation</span>. The program will teach <span class="highlight">assertive body language</span> and <span class="highlight">powerful strategies</span> to tackle interview challenges. Emphasis will be placed on <span class="highlight">effectively showcasing skills and knowledge</span>, empowering participants to <span class="highlight">highlight their strengths</span> compellingly. This <span class="highlight">comprehensive training</span> ensures that participants <span class="highlight">present themselves with confidence</span> and make a <span class="highlight">lasting impression</span>, turning interview challenges into <span class="highlight">opportunities for success</span>.</p>
+            <div class="quote">
+                "<span class="highlight">Twenty years from now, you won't regret the things you did, but you'll regret the opportunities you missed. Today, you need to take that first step, which will not only build your confidence but also enhance your skills, essential for seizing those opportunities.</span>"
+            </div>
+            <p><strong>Program Language:</strong> A mix of <span class="highlight">English and Hindi</span> for better understanding, ensuring it directly touches your heart and mind.</p>
+        </div>
+        
+
+        <div class="card faq">
+            <h2>PROGRAM DETAILS - FAQ</h2>
+            <h3> <span class="highlight"> Q1: Why should I attend this program, and what will I gain from it?</span></h3>
+            <p>Attend this program to boost your skills and confidence, and gain effective strategies for making a strong impression in any field.</p>
+
+            <h3><span class="highlight"> Q2: What benefits can I gain from this program?</span></h3>
+            <p>By completing this program, you'll develop the confidence to handle interviews effectively and make a strong impression.</p>
+
+            <h3><span class="highlight">Q3: How do I start with this program, and when should I join the session?</span></h3>
+            <p>It's easy! Just click the link to join our online session and be sure to connect 5 minutes before the scheduled start time.</p>
+
+            <h3><span class="highlight">Q4: When will I receive the link and password for the session, and how will I get them?</span></h3>
+            <p>You will receive the link and password for the session 2 hours before it starts. This will allow you to easily join the session on time.</p>
+
+            <h3><span class="highlight">Q5: What should I bring to this training program?</span></h3>
+            <p>Please bring a notebook and pen to write down important notes during the sessions. These notes will be helpful for you in the future and make it easier to apply what you learn.</p>
+
+            <h3><span class="highlight">Q6: What support will I receive from this online training session?</span></h3>
+            <p>Yes, you'll get support through a dedicated WhatsApp group created for the session, where we'll share valuable training information, updates, and tips for your self-improvement.</p>
+        </div>
+        <div class="button-container">
+            <a href="register.html" class="btn">Register Now</a>
+        </div>
+        
+    </div>
+    <script>
+        // Simple script to toggle FAQ answers
+        document.querySelectorAll('.faq h3').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

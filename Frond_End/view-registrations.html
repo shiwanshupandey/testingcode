@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Registrations</title>
+</head>
+<body>
+    <h1>Registrations</h1>
+    <div id="registrations"></div>
+
+    <script>
+        fetch('/view-registrations')
+            .then(response => response.json())
+            .then(data => {
+                const registrationsDiv = document.getElementById('registrations');
+                data.forEach(registration => {
+                    registrationsDiv.innerHTML += `<p>${JSON.stringify(registration)}</p>`;
+                });
+            });
+    </script>
+</body>
+</html>
