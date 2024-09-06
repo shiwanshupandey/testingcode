@@ -81,7 +81,7 @@ app.post('/', async (req, res) => {
     console.log('Response from Sheets API:', response.data);
 
     // Redirect to the data page after successful registration
-    res.redirect('/data');
+    res.redirect('/');
   } catch (error) {
     console.error('Error processing registration:', error);
     res.status(500).json({ success: false, error: 'Registration failed', details: error.message });
