@@ -75,16 +75,26 @@ app.post('/', async (req, res) => {
   }
 });
 
-// New route for the data page
 app.get('/', async (req, res) => {
   try {
     const data = await getDataFromGoogleSheet();
-    res.render('index', { data });
+
+    // Check the "Accept" header for JSON or HTML
+    const acceptHeader = req.headers.accept;
+
+    if (acceptHeader && acceptHeader.includes('application/json')) {
+      // Respond with JSON if the client expects JSON
+      res.json(data);
+    } else {
+      // Otherwise, render the HTML template with the data
+      res.render('index', { data });
+    }
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'Error fetching data from Google Sheets' });
   }
 });
+
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Server running on port ${process.env.PORT || 3000}`);
