@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const allowedOrigins = ['https://formpayment.ogcs.co.in'];
+const allowedOrigins = ['https://formpayment.ogcs.co.in','https://form.ogcs.co.in/register.html'];
 
 app.use(cors({
   origin: allowedOrigins,
