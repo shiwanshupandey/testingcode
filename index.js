@@ -11,14 +11,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const allowedOrigins = ['https://formpayment.ogcs.co.in','https://form.ogcs.co.in/register.html','https://form.ogcs.co.in/'];
+// const allowedOrigins = ['https://formpayment.ogcs.co.in','https://form.ogcs.co.in/register.html','https://form.ogcs.co.in/'];
 
 app.use(cors({
-  origin: allowedOrigins,
-   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Adjust methods as needed
-  allowedHeaders: ['Content-Type', 'Authorization'], // Adjust headers as needed
+  origin: 'https://form.ogcs.co.in',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+
 
 app.set('view engine', 'ejs');
 
