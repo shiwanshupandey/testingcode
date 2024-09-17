@@ -15,7 +15,9 @@ const allowedOrigins = ['https://formpayment.ogcs.co.in','https://form.ogcs.co.i
 
 app.use(cors({
   origin: allowedOrigins,
-  credentials: true // If your frontend requires cookies or other credentials
+   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Adjust methods as needed
+  allowedHeaders: ['Content-Type', 'Authorization'], // Adjust headers as needed
+  credentials: true
 }));
 
 app.set('view engine', 'ejs');
